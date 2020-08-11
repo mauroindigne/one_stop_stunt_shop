@@ -21,14 +21,32 @@ body {
     width: 1.5rem;
 }
 
+.page-button {
+    color: black;
+    font-size: 18px;
+}
+
+.page-button:hover {
+    color: red;
+    text-decoration: underline;
+}
+
 .logo-font {
     text-transform: uppercase;
     color: red;
     text-align: center;
 }
 
+.homepage-header {
+    color:red;
+}
+
 .main-logo-link {
     width: fit-content;
+}
+
+.my-account-link:hover {
+    color:red;
 }
 
 .shop-now-button {
