@@ -43,12 +43,6 @@ body {
     text-decoration: underline;
 }
 
-.signin {
-    top:40%;
-    background-color: white;
-    padding:20px;
-}
-
 .logo-font {
     text-transform: uppercase;
     color: red;
