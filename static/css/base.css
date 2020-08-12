@@ -21,14 +21,32 @@ body {
     width: 1.5rem;
 }
 
+#topnav {
+    background-color: black;
+}
+
+#user-options {
+    color: red;
+}
+
+.shopping-bag {
+    color: red;
+}
+
 .page-button {
-    color: black;
+    color: red;
     font-size: 18px;
 }
 
 .page-button:hover {
-    color: red;
+    color: white;
     text-decoration: underline;
+}
+
+.signin {
+    top:40%;
+    background-color: white;
+    padding:20px;
 }
 
 .logo-font {
@@ -46,7 +64,7 @@ body {
 }
 
 .my-account-link:hover {
-    color:red;
+    color:white;
 }
 
 .shop-now-button {
