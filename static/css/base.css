@@ -100,8 +100,15 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: BLACK;
+	background: white;
 	z-index: -1;
+}
+
+.product-page-header {
+    color: black;
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* -------------------------------- Media Queries */
