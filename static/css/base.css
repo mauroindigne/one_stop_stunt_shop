@@ -137,9 +137,15 @@ body {
     position: relative;
     bottom:0;
     width:100%;
-    height:100px;   /* Height of the footer */
     background:black;
     border-top: 5px solid red;
+}
+
+.footer-social {
+    text-align: center;
+    color: red;
+    font-size: 30px;
+    text-align: center;
 }
 
 /* -------------------------------- Media Queries */
@@ -173,6 +179,6 @@ body {
     }
 
     .product-page-header {
-        padding-top: 40px;
+        padding-top: 40px; 
     }
 }
