@@ -14,7 +14,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="product-page-header">Products</h2>
+                <a href="{% url 'products' %}" class="">
+                    <h2 class="product-page-header">Products</h2>
+                </a>
                 <div class="row">
                     <div class="col-2 my-auto offset-2">
                         <a class="category-button" href="{% url 'products' %}?category=hand-brake">HandBrake</a>
