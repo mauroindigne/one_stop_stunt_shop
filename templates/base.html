@@ -43,9 +43,9 @@
                     <h2 class="logo-font site-name ml-1"><strong>One Stop</strong><strong style="color:white;"> Stunt Shop</strong></h2>
                 </a>
             </div>
-            <button class="navbar-toggler col-12" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            <button class="navbar-toggler col-2 mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
             aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span><i class="fas fa-bars"></i></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,7 +53,7 @@
                 <div class="col-12 col-lg-4 mx-auto my-auto py-1 py-lg-0">
                     <div class="row">
                         <a class="nav-link page-button" href="#">Tips/Advice</a>
-                        <a class="nav-link page-button" href="#">Stunt Kits</a>
+                        <a class="nav-link page-button" href="{% url 'view_stuntkit' %}">Stunt Kits</a>
                         <a class="nav-link page-button" href="{% url 'products' %}">Products</a> 
                     </div>
                 </div>

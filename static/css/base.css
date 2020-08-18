@@ -29,6 +29,10 @@ body {
     color: red;
 }
 
+.container {
+    height: 100%;
+}
+
 .shopping-bag {
     color: red;
 }
@@ -111,6 +115,10 @@ body {
     border: 1px solid black !important;
 }
 
+.stuntkit-container {
+    padding-top: 100px;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -138,6 +146,12 @@ body {
     margin-top: 100px;
 }
 
+.stunt-kit-block {
+    border: solid 5px red;
+    height: 50vh;
+    margin: auto;
+}
+
 
 .footer-container {
     position: relative;
@@ -151,8 +165,13 @@ body {
     text-align: center;
     color: red;
     font-size: 30px;
-    text-align: center;
 }
+
+.fa-bars {
+    color: red;
+    font-size 10px
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -187,4 +206,13 @@ body {
     .product-page-header {
         padding-top: 40px; 
     }
+}
+
+/* Forsmaller deviced */
+@media (max-width: 800px) {
+    .category-button {
+        font-size: 13px;
+    }
+
+    
 }

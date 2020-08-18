@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container stuntkit-container mb-3">
+        <div class="row">
+            <div class="col-4 mx-auto">
+                <div class="logo-font">
+                    <h1>Stunt Kits<h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col stunt-kit-block mr-1 ml-1">
+                Full Stunt Kit
+            </div>
+            <div class="col stunt-kit-block">
+                basic Stunt Kit
+            </div>
+        </div>
+    </div>
+{% endblock %}
