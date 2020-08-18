@@ -210,9 +210,6 @@ body {
 
 /* Forsmaller deviced */
 @media (max-width: 800px) {
-    .category-button {
-        font-size: 13px;
-    }
 
     
 }

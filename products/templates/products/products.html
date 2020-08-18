@@ -15,23 +15,44 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <a href="{% url 'products' %}" class="">
-                    <h2 class="product-page-header">Products</h2>
+                    <h2 class="product-page-header">All Products</h2>
                 </a>
-                <div class="row justify-content-md-center mx-auto text-center">
+                <div class="row justify-content-md-center w-50 mx-auto text-center">
                     <div class="col-md-auto mx-auto text-center">
-                       <a class="category-button" href="{% url 'products' %}?category=hand-brake">HandBrake</a>
+                       <a class="category-button" href="{% url 'products' %}?category=hand-brake">HandBrakes</a>
                     </div>
                     <div class="col-md-auto mx-auto text-center">
-                        <a class="category-button" href="{% url 'products' %}?category=caliper-bracket">Caliper Bracket</a>
+                        <a class="category-button" href="{% url 'products' %}?category=caliper-bracket">Caliper Brackets</a>
                     </div>
                     <div class="col-md-auto mx-auto text-center">
                         <a class="category-button" href="{% url 'products' %}?category=sprocket">Sprockets</a>
                     </div>
                     <div class="col-md-auto mx-auto text-center">
-                        <a class="category-button" href="{% url 'products' %}?category=crash_cage,sub-cage">Crash Cage</a>
+                        <a class="category-button" href="{% url 'products' %}?category=crash_cage,sub-cage">Crash Cages</a>
                     </div>
                 </div>
                 <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col justify-content-center">
+                <p class="text-muted text-center text-center mt-1">
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+
+            <div class="col justify-content-center">
+                <div class="sort-select-wrapper w-50">
+                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -50,8 +71,10 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            <small class="text-muted"><strong>Motorbike:</strong> {{ product.motorbike }}</small>
+                                            <p class="lead mb-0 text-left font-weight-bold">
+                                                ${{ product.price }}
+                                            </p>
+                                            <small class="text-muted"><strong>Motorbike Brand:</strong> {{ product.motorbike }}</small>
                                         </div>
                                     </div>
                                 </div>
