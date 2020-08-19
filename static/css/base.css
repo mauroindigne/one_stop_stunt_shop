@@ -59,6 +59,10 @@ body {
     text-decoration: none;
 }
 
+.img-product {
+    height: 250px;
+}
+
 .logo-font {
     text-transform: uppercase;
     color: red;
