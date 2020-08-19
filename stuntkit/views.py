@@ -6,6 +6,12 @@ def view_stuntkit(request):
     """ A view to return the stuntkit page """
     return render(request, 'stuntkit/stuntkit.html')
 
-def view_stuntkit_detail(request):
+
+def view_basic_stuntkit_detail(request):
     """ A view to return the stuntkit page """
-    return render(request, 'stuntkit/stuntkit_detail.html')
+    return render(request, 'stuntkit/basic_stuntkit_detail.html')
+
+
+def view_full_stuntkit_detail(request):
+    """ A view to return the stuntkit page """
+    return render(request, 'stuntkit/full_stuntkit_detail.html')

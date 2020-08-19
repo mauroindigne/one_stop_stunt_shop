@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mb-3">
+        <div class="row stuntkit-container">
+            <div class="col mx-auto">
+                <div class="text-center">
+                    <h1>$999</h1>
+                </div>
+                <div class="logo-font text-center">
+                    <h1>Full Stunt Kit<h1>
+                </div>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        
+        <div class="row justify-content-center mt-3">
+            <div class="col-12 col-lg-5 text-center mx-4">
+                <h2 style="color:red;">Information</h2>
+                <p>The full stunt kit will include all the <strong>Basic Stunt Kit</strong> items + extras that will allow you to do more tricks and make it easier to control the wheelie. This Kit includes the following items.</p>
+                <ul class="ml-5 pl-5 text-left">
+                    <li>(1) Crash Cage + Rubbers</li>
+                    <li>(1) Sub Cage + Pegs</li>
+                    <li>(1) 60T Rear Sprocket</li>
+                    <li>(1) Long Chain</li>
+                    <li>(1) Brake line </li>
+                    <li>(1) CNC Aluminium Caliper Bracket.</li>
+                    <li>(1) 4 Piston Caliper </li>
+                    <li>(1) Shorty Clutch Lever</li>
+                </ul>
+                <p>
+                   We custom make parts and source part from other brands.  We then take your order and ship all parts together to your door ready to be attach to your bike.
+                </p>
+                <p style="color:red;">*all screws needed are included*</p>
+                <p style="color:red;">*master-Cylinder Optional Please Specify*</p>
+
+            </div>
+            <div class="col-12 col-lg-5 text-center mx-4">
+                <div>
+                    <h2 style="color:red;">Place Your Order</h2>
+                    <p>
+                        We will email you with prices and details once you have submitted your request.
+                    </p>
+                </div>
+                <form class="text-left">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="">First Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                        </div>
+                        <div class="col">
+                            <label for="">Last Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col mb-1">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="">
+                        </div>
+                    </div> 
+                    <div class="form-row">
+                        <label for="inputState">Motorbike Model:</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Kawasaki Ninja 300/250</option>
+                            <option>Honda Msx</option>
+                            <option>Yamaha MT-07</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="inputState">Cage/Sub-Cage Color:</label>
+                        <select id="inputState" class="form-control">
+                            <option>Black (standard)</option>
+                            <option>White (+$10)</option>
+                            <option>Blue (+$10)</option>
+                            <option>Yellow (+$10)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="exampleFormControlTextarea1">
+                            Specifications or Questions?
+                        </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
