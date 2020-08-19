@@ -214,6 +214,11 @@ body {
 
 /* Forsmaller deviced */
 @media (max-width: 800px) {
-
+    .stuntkit-container {
+        padding-top: 160px;
+    }
+    .product-page-header {
+        padding-top: 62px; 
+    }
     
 }
