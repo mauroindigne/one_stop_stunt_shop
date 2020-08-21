@@ -42,7 +42,16 @@ body {
 
 .page-button:hover {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+.social-links {
+    color:red;    
+}
+
+.social-links:hover{
+    color:white;
+    font-size: 105%;
 }
 
 .category-button {
