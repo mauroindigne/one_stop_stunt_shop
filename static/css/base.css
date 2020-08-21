@@ -87,6 +87,8 @@ body {
     color:white;
 }
 
+.
+
 .shop-now-button {
     background: red;
     color: white;
@@ -125,7 +127,7 @@ body {
     border: 1px solid black !important;
 }
 
-.stuntkit-container {
+.content-container {
     padding-top: 100px;
 }
 
@@ -175,6 +177,10 @@ body {
     text-align: center;
     color: red;
     font-size: 30px;
+}
+
+.bag-container {
+    margin-top: 100px;
 }
 
 .fa-bars {
@@ -227,7 +233,7 @@ body {
 
 /* Forsmaller deviced */
 @media (max-width: 800px) {
-    .stuntkit-container {
+    .content-container {
         padding-top: 160px;
     }
     .product-page-header {
