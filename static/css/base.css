@@ -87,6 +87,26 @@ body {
     color:white;
 }
 
+.login-block {
+    background-color: black;
+    color: white;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin: auto;
+    padding: 5%;
+    border-radius: 50px;
+
+}
+
+.red-text {
+    color: red;
+    text-decoration: none;
+}
+
+.red-text:hover {
+    color: red;
+}
+
 .shop-now-button {
     background: red;
     color: white;
@@ -236,6 +256,10 @@ body {
     }
     .product-page-header {
         padding-top: 62px; 
+    }
+
+    .login-block {
+        margin-top: 62px;
     }
     
 }
