@@ -263,3 +263,14 @@ body {
     }
     
 }
+
+/* Forsmaller Sideways devices */
+@media (max-height: 450px) {
+
+    .footer-container {
+        bottom: -120px;
+    }
+    .homepage-header {
+        margin-top: 13%;
+    }
+}
