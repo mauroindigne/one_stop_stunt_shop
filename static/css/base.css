@@ -206,6 +206,10 @@ body {
     color: red;
 }
 
+.color-white {
+    color:white;
+}
+
 .btn-outline-danger {
     color: red;
     border: solid red 1px;
