@@ -35,3 +35,8 @@
     color: #000;
     border: 1px solid red;
 }
+
+.order-confirm-block {
+    border: red solid 2px;
+    padding: 2%;
+}
