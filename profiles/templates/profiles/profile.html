@@ -34,7 +34,40 @@
             </div>
             <div class="col">
                 <p>Order History</p>
-                {{ orders }}
+                <div>
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>Order Number</tr>
+                            <tr>Date</tr>
+                            <tr>Items</tr>
+                            <tr>Order Total</tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <tr>
+                                        <a href="{% url 'order_history' order.order_number  %}" title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6  }}
+                                        </a>
+                                    </tr>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <ul>
+                                            {% for items in order.lineitems.all %}
+                                                <li>
+                                                    {% if item.product.has_colors %}
+                                                        Color {{ item.product.color|upper }}
+                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>${{ order.grand_total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
