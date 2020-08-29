@@ -9,12 +9,14 @@
     <div class="toast-body">
         {{ message }}        
     </div>
-    <div class="col-6 mx-auto mb-2">
-        <a href="{% url 'view_bag' %}" class="btn btn-outline-danger rounded-0">
-            <span class="text-uppercase">Checkout</span>
-            <span class="icon">
-                <i class="fas fa-check"></i>
-            </span>
-        </a>
-    </div>
+    {% if grand_total and not on_profile_page %}
+        <div class="col-6 mx-auto mb-2">
+            <a href="{% url 'view_bag' %}" class="btn btn-outline-danger rounded-0">
+                <span class="text-uppercase">Checkout</span>
+                <span class="icon">
+                    <i class="fas fa-check"></i>
+                </span>
+            </a>
+        </div>
+    {% endif %}
 </div>
