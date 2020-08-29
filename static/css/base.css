@@ -223,6 +223,9 @@ body {
     background-color: red;
 }
 
+.btn-danger {
+    background-color: red;
+}
 /* ----------- bootstrap toasts  --------------------*/
 
 .message-container {
@@ -230,10 +233,13 @@ body {
     top: 90px;
     right: 15px;
     z-index: 999999999;
+    color:red;
 }
 
 .toast-block {
     overflow: visible;
+    background-color: white;
+    border: solid red 3px;
 }
 
 .toast-capper {

@@ -57,7 +57,11 @@
                                         <p class="my-0">${{ item.product.price| calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td>
-                                        <button class="remove-item btn my-auto btn-outline-danger float-right" id="remove_{{ item.item_id }}" data-color="{{ item.color }}"><small>Remove</small></button>
+                                        <button class="remove-item btn my-auto btn-danger float-right" id="remove_{{ item.item_id }}" data-color="{{ item.color }}">
+                                            <span class="icon">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </span>
+                                        </button>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -75,16 +79,16 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
+                                    <a href="{% url 'checkout' %}" class="btn btn-outline-danger rounded-0 btn-lg">
+                                        <span class="text-uppercase">Checkout</span>
                                         <span class="icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fas fa-check"></i>
                                         </span>
                                     </a>
                                 </td>
