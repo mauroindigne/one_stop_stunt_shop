@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'stuntkit',
     'bag',
     'checkout',
+    'profiles',
 
     # Others
     'crispy_forms',
