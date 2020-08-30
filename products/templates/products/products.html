@@ -64,14 +64,15 @@
                                     <img class="card-img-top img-product img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}  
-                                <div class="no-image card-img-top img-product img-fluid my-auto mx-auto">
+                                <a href="{% url 'product_detail' product.id %}" class="no-image card-img-top img-product img-fluid my-auto mx-auto">
                                     <div class="text-center">
                                         <i class="far fa-grimace no-image-icon"></i>
                                     </div>
                                     <div class="no-image-text text-center">
                                         <h1 class="text-center">No Image</h1>
                                     </div>
-                                </div>                               
+                                </a>
+                                                         
                                 {% endif %}    
                                 <div class="card-body pb-0">
                                     <p class="mb-0 red-text">{{ product.name|upper }}</p>
