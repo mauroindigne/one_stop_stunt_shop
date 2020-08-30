@@ -168,6 +168,16 @@ body {
 	z-index: -1;
 }
 
+.overlay-black {
+    height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: black;
+	z-index: -1;
+}
+
 .product-page-header {
     color: black;
     margin-top: 100px;
@@ -179,6 +189,12 @@ body {
     text-transform: capitalize;
     color: red;
 
+}
+.fa-star-half {
+    color: red;
+}
+.fa-star {
+    color: red;
 }
 
 .checkout_block {
