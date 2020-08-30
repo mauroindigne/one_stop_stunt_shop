@@ -1,4 +1,4 @@
-# [One-Stop-Stunt_Shop](https://stunt-lounge.herokuapp.com/)
+# [One-Stop-Stunt_Shop](https://mauroi-one-stop-stunt-shop.herokuapp.com/)
 
 One Stop Stunt Shop is a website that i've been thinking about creating since the begging of this course. The reason why I wanted to create this website was because there are not so many stunt stores out there currently, and the few that are out there are starting to look old, are complicated and not user friendly. This site is for people who are looking to buy stunt parts for their motorbikes that are not always in the market. The goal of this website is to be able to cater to those who are looking to start stunting and don't know what parts their bike needs. Therefore this site is able to grow what we sell along with growing in size, based on information. With this website you can create a user to save your shipping information and you can place full payments in the database and use’s Stripe to do card payments for the products you would like to use.
 
@@ -65,10 +65,9 @@ products of the brand selected.
 - Stripe - This site uses Stripe inorderr to secure payment with card. 
 
 
-
 ### Features Left to Implement
 
-- 
+- Emails - currently the site is not able to send emails. the acconts will be updated manualy. I had some issues with seeing up the emails properly so you cant veify an acccount unless your using the admin
 
 ## Technologies Used
 
@@ -107,7 +106,7 @@ One quite interesting bug that you may notice is the footer, iv had to ask the t
 
 ## Deployment
 
-This site is hosted using [Heroku](https://stunt-lounge.herokuapp.com/) pages, deployed directly from the master branch. 
+This site is hosted using [Heroku](https://mauroi-one-stop-stunt-shop.herokuapp.com/) pages, deployed directly from the master branch. 
 
 - Local Deployment:
  1. To run the code locally you can go to [Github repository](https://github.com/mauroindigne/one_stop_stunt_shop).
