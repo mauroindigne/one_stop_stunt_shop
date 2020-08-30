@@ -67,7 +67,24 @@ body {
 
 .img-product {
     min-height: 250px;
-    max-height: 250px
+    max-height: 250px;
+}
+
+.no-image {
+    min-height: 250px;
+    max-height: 250px;
+    background-color:#555;
+    width: 400px;
+}
+
+.no-image-text {
+    color: white;
+}
+
+.no-image-icon {
+    color: white;
+    font-size: 40px;
+    margin-top: 20%;
 }
 
 .logo-font {
