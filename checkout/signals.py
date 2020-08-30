@@ -3,6 +3,8 @@ from django.dispatch import receiver
 
 from .models import OrderLineItem
 
+
+# This is to save the order Insparation from boutique_ado lessons
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
     """

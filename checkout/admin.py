@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
+# admin page for all the fields to be adjusted and is taken from the boutique_ado lessons
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)

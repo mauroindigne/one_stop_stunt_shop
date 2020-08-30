@@ -3,14 +3,16 @@
 {% load bag_tools %}
 
 {% block page_header %}
+<!-- Page header -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
 {% endblock %}
-
+<!-- Bag Page -->
 {% block content %}
+<!-- Space for navbar with overlay -->
     <div class="overlay"></div>
     <div class="container content-container my-auto">
         <div class="row">
@@ -20,13 +22,14 @@
                 <hr>
             </div>
         </div>
-
+<!-- Items in Bag -->
         <div class="row">
             <div class="col">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
+                            <!-- Bag Items Info Titles-->
                                 <tr>
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
@@ -35,18 +38,31 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
-
+                            <!-- Bag Items For Loop -->
                             {% for item in bag_items %}
                                 <tr>
+                                    <!-- Bag Items Image-->
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     </td>
+
+                                    <!-- Bag Items Product Info-->
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name|upper }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                        <p class="my-0"><strong>Color: </strong>{{ item.color|upper }}</p>
-                                        <p class="my-0 small text-muted">Motorbike: {{ item.product.motorbike|upper }}</p>
+                                        <p class="my-0">
+                                            <strong>{{ item.product.name|upper }}</strong>
+                                        </p>
+                                        <p class="my-0 small text-muted">
+                                            SKU: {{ item.product.sku|upper }}
+                                        </p>
+                                        <p class="my-0">
+                                            <strong>Color: </strong>{{ item.color|upper }}
+                                        </p>
+                                        <p class="my-0 small text-muted">
+                                            Motorbike: {{ item.product.motorbike|upper }}
+                                        </p>
                                     </td>
+
+                                    <!-- Bag Items Price info-->
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
@@ -56,6 +72,7 @@
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price| calc_subtotal:item.quantity }}</p>
                                     </td>
+                                    <!-- Remove Item From Bag -->
                                     <td>
                                         <button class="remove-item btn my-auto btn-danger float-right" id="remove_{{ item.item_id }}" data-color="{{ item.color }}">
                                             <span class="icon">
@@ -63,13 +80,16 @@
                                             </span>
                                         </button>
                                     </td>
+
                                 </tr>
                             {% endfor %}
+                            <!-- Bag Grand Total -->
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <!-- Delivery if statment -->
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger">
                                             You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
@@ -77,6 +97,7 @@
                                     {% endif %}
                                 </td>
                             </tr>
+                            <!-- Checkout or Continue Shopping buttons-->
                             <tr>
                                 <td colspan="5" class="text-right">
                                     <a href="{% url 'products' %}" class="btn btn-danger rounded-0 btn-lg">
@@ -93,6 +114,7 @@
                         </table>
                     </div>
                 {% else %}
+                <!-- If bag is empty, bag empty will show -->
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-danger mb-2 rounded-0 btn-lg">
                         <span class="icon">

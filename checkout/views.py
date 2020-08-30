@@ -15,6 +15,7 @@ import stripe
 import json
 
 
+# Insparation from boutique_ado lessons
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -32,6 +33,7 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
+# Checkout view
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -136,6 +138,7 @@ def checkout(request):
     return render(request, template, context)
 
 
+# Check out successs view
 def checkout_success(request, order_number):
     """
     Handle successful checkouts

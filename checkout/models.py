@@ -8,6 +8,7 @@ from profiles.models import UserProfile
 from products.models import Product
 
 
+# Insparation from boutique_ado lessons
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
@@ -59,6 +60,7 @@ class Order(models.Model):
         return self.order_number
 
 
+# saves the order line items
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)

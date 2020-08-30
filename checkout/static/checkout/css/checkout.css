@@ -1,3 +1,5 @@
+
+/* ----------- Stripe  --------------------*/
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -25,23 +27,6 @@
     color: 	#696969;
 }
 
-.fieldset-label {
-    position: relative;
-    right: .5rem;
-}
-
-#payment-form .form-control,
-#card-element {
-    color: #000;
-    border: 1px solid red;
-}
-
-.order-confirm-block {
-    border: red solid 2px;
-    padding: 2%;
-}
-
-
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -60,3 +45,21 @@
     margin: 0;
     height: 100%;
 }
+/* ----------- Forms  --------------------*/
+
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid red;
+}
+
+.order-confirm-block {
+    border: red solid 2px;
+    padding: 2%;
+}
+

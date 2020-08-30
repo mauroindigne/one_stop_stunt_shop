@@ -10,6 +10,8 @@ from profiles.models import UserProfile
 import json
 import time
 
+
+# Stripe WH followed from boutique_ado lessons
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 

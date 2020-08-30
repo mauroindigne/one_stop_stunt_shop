@@ -3,14 +3,15 @@ from django.contrib import messages
 
 from products.models import Product
 
-# Create your views here.
 
+# This renders the view_bag page
 def view_bag(request):
     """ A view that renders the bag contents page """
 
     return render(request, 'bag/bag.html')
 
 
+# This Adds a product to the bag Insparation from boutique_ado lessons
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
     product = get_object_or_404(Product, pk=item_id)
@@ -41,10 +42,11 @@ def add_to_bag(request, item_id):
             messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
-    
+
     return redirect(redirect_url)
 
 
+# This Removes the product from the bag Insparation from boutique_ado lessons
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
 

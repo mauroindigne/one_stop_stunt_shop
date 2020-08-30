@@ -1,0 +1,1 @@
+web: gunicorn one_stop_stunt_shop.wsgi:application

@@ -12,7 +12,13 @@ body {
     font-family: 'Oswald';
 }
 
-/* from Bulma */
+/* --------------- All page css -------------------- */
+.logo-font {
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -21,13 +27,49 @@ body {
     width: 1.5rem;
 }
 
-#topnav {
-    background-color: black;
+.red-text {
+    color: red;
+    text-decoration: none;
 }
 
-#user-options {
+.red-text:hover {
     color: red;
 }
+
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.color-white {
+    color:white;
+}
+
+.btn-outline-danger {
+    color: red;
+    border: solid red 1px;
+}
+
+.btn-outline-danger:hover {
+    background-color: red;
+}
+
+.btn-danger {
+    background-color: red;
+}
+
+
+/* --------------- Icons -------------------- */
+
 
 
 .shopping-bag {
@@ -87,11 +129,6 @@ body {
     margin-top: 20%;
 }
 
-.logo-font {
-    text-transform: uppercase;
-    color: red;
-    text-align: center;
-}
 
 .homepage-header {
     color:red;
@@ -103,6 +140,24 @@ body {
 50% { opacity: 0.1; }
 75% { opacity: 0.5; }
 100% { opacity: 1.0; }
+}
+
+
+
+/* ----------- Navbar --------------------*/
+
+.dropdown-menu {
+    background-color: red;
+    border-top: none;
+}
+
+.dropdown-item {
+    color: white;
+    background-color: red;
+}
+
+#topnav {
+    background-color: black;
 }
 
 .main-logo-link {
@@ -124,39 +179,6 @@ body {
 
 }
 
-/* ----------- Navbar --------------------*/
-
-.dropdown-menu {
-    background-color: red;
-    border-top: none;
-}
-
-.dropdown-item {
-    color: white;
-    background-color: red;
-}
-
-.red-text {
-    color: red;
-    text-decoration: none;
-}
-
-.red-text:hover {
-    color: red;
-}
-
-.shop-now-button {
-    background: red;
-    color: white;
-    min-width: 260px;
-    animation: blinking 1.5s linear infinite;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
 .website-navbar {
     background-color: black;
     border-bottom: 5px solid red;
@@ -164,6 +186,20 @@ body {
 
 .site-name:hover {
     text-decoration: underline red;
+}
+
+#user-options {
+    color: red;
+}
+
+/* ----------- Homepage --------------------*/
+
+
+.shop-now-button {
+    background: red;
+    color: white;
+    min-width: 260px;
+    animation: blinking 1.5s linear infinite;
 }
 
 .shop-now-button:hover,
@@ -176,14 +212,7 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
+/* ----------- Containers / Headers / overlay--------------------*/
 .content-container {
     padding-top: 100px;
 }
@@ -198,15 +227,6 @@ body {
 	z-index: -1;
 }
 
-.overlay-black {
-    height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: black;
-	z-index: -1;
-}
 
 .product-page-header {
     color: black;
@@ -214,6 +234,22 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
+
+.checkout_block {
+    margin-top: 100px;
+}
+
+.stunt-kit-block {
+    border: solid 5px red;
+    height: 50vh;
+    margin: auto;
+}
+
+.bag-container {
+    margin-top: 100px;
+}
+
+/* ----------- Products --------------------*/
 
 .item-title {
     text-transform: capitalize;
@@ -227,20 +263,13 @@ body {
     color: red;
 }
 
-.checkout_block {
-    margin-top: 100px;
-}
-
 .product-item-detail {
     margin-top: 100px;
     padding-bottom: 240px;
 }
 
-.stunt-kit-block {
-    border: solid 5px red;
-    height: 50vh;
-    margin: auto;
-}
+
+
 /* --------------- Allauth forms -------------------- */
 .allauth-form-inner-content input {
     border-color: red;
@@ -261,30 +290,11 @@ body {
     font-size: 30px;
 }
 
-.bag-container {
-    margin-top: 100px;
-}
-
 .fa-bars {
     color: red;
 }
 
-.color-white {
-    color:white;
-}
 
-.btn-outline-danger {
-    color: red;
-    border: solid red 1px;
-}
-
-.btn-outline-danger:hover {
-    background-color: red;
-}
-
-.btn-danger {
-    background-color: red;
-}
 /* ----------- bootstrap toasts  --------------------*/
 
 .message-container {
@@ -333,7 +343,7 @@ body {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* smaaller */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;

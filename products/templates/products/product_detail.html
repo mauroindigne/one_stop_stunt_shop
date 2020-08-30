@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+<!-- Page header -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -10,9 +11,11 @@
 {% endblock %}
 
 {% block content %}
+<!-- Space for navbar with overlay -->
     <div class="overlay"></div>
     <div class="container-fluid pt-5 product-item-detail">
         <div class="row">
+            <!-- If product has image display and if not load no image div -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-4">
                 {% if product.image %}
@@ -31,6 +34,8 @@
                 {% endif %}
                 </div>
             </div>
+
+            <!-- Product info -->
             <div class="col-12 col-md-6 col-lg-4 my-auto"> 
                 <div class="col pl-0 ">
                     <h3 class="item-title">{{ product.name }}</h1>
@@ -41,9 +46,12 @@
                 <div class="col pl-0 font-weight-light mt-2">
                     <p><strong>Motorbike:</strong> {{ product.motorbike }}</p>
                 </div>
+
+                <!-- Form if item is added into bag -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
+                        <!-- IF item has color gives this option -->
                         {% with product.has_colors as s %}
                         {% if s %}
                             <div class="col-12">
@@ -57,6 +65,7 @@
                                 </select>
                             </div>
                         {% endif %}
+                        <!-- Quantity of product selected -->
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
@@ -66,6 +75,7 @@
                             </div>
                         </div>
 
+                        <!-- Options for user to continue shopping or add to bag -->
                         <div class="col-12">
                             <a href="{% url 'products' %}" class="btn btn-outline-danger rounded-0 mt-5">
                                 <span class="text-uppercase">Continue Shopping</span>
@@ -74,6 +84,8 @@
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
+
+                        <!-- If user is Superuser this will allow them to delete or edit product -->
                         {% if request.user.is_superuser %}
                         <div class="col-12 mt-3 mb-3">
                             <small class="ml-3">

@@ -2,6 +2,7 @@ from django import forms
 from .models import Order
 
 
+# Form info
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
