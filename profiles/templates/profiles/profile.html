@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block page_header %}
+<!-- Page header -->
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
@@ -14,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- Space for navbar with overlay -->
     <div class="overlay"></div>
     <div class="container pt-5  mt-5">
         <div class="row">
@@ -23,6 +25,8 @@
                 <hr>
             </div>
         </div>
+
+        <!-- Show all users information/orders -->
         <div class="container">
             <div class="col ">
                 <h2 class="red-text">Default Delivery Informstion</h2>
@@ -32,6 +36,8 @@
                     <button class="btn btn-outline-danger">Update Information</button>
                 </form>
             </div>
+
+            <!-- Display Order History -->
             <div class="col mt-5 text-center">
                 <h2 class="red-text mb-5">Order History</h2>
                 <div class="col">

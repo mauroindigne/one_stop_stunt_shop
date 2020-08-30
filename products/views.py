@@ -7,8 +7,8 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
 
+# View all products
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -50,6 +50,7 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+# View for product details
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
@@ -62,6 +63,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+# Add product but only with login
 @login_required
 def add_product(request):
     """ add a  product to the store"""
@@ -87,6 +89,8 @@ def add_product(request):
 
     return render(request, template, context)
 
+
+# edit product but only with login
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -115,6 +119,8 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
+# delete product but only with login
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
