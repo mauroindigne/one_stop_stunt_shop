@@ -25,7 +25,7 @@ SECRET_KEY = 'j9=(&t2u681m+w#+s696$)+)=17kgrdwxxud$ily(s@d*=rwat'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mauroi-one-stop-stunt-shop.herokuapp.com', 'localhost']
 
 
 # Application definition
