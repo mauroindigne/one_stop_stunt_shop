@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -118,12 +120,17 @@ WSGI_APPLICATION = 'one_stop_stunt_shop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://tpfrqsvajsjzzy:8a57d166f512bb5fd2451e3c503df300424726341e313a8010a22cc5234a1f96@ec2-54-217-236-206.eu-west-1.compute.amazonaws.com:5432/d55urv274a4849')
 }
+
 
 
 # Password validation
