@@ -106,6 +106,18 @@ body {
 
 }
 
+/* ----------- Navbar --------------------*/
+
+.dropdown-menu {
+    background-color: red;
+    border-top: none;
+}
+
+.dropdown-item {
+    color: white;
+    background-color: red;
+}
+
 .red-text {
     color: red;
     text-decoration: none;

@@ -8,11 +8,11 @@
 
 {% block inner_content %}
 
-        <<h1 class="text-center red-text">{% trans "Sign Out" %}</h1>
+        <h1 class=" red-text">{% trans "Sign Out" %}</h1>
 
-        <p>{% trans 'Are you sure you want to sign out?' %}</p>
+        <p class="">{% trans 'Are you sure you want to sign out?' %}</p>
 
-        <form method="post" action="{% url 'account_logout' %}">
+        <form method="post" action="{% url 'account_logout' %}" class="mx-auto">
         {% csrf_token %}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
